@@ -8,12 +8,20 @@
         padding: 8rem 0;
     }
 
+    @include respond(phone) { 
+        padding: 5rem 0;
+    }
+
     &__logo-box {
         text-align: center;
         margin-bottom: 8rem;
 
         @include respond(tab-port) { 
             margin-bottom: 6rem;
+        }
+
+        @include respond(phone) { 
+            margin-bottom: 3rem;
         }
     }
 
@@ -30,6 +38,12 @@
         @include respond(tab-port) { 
             width: 100%;
             text-align: center; 
+            font-size: 1.8rem;
+        }
+
+        @include respond(phone) { 
+            padding-top: 1rem;
+            text-align: left; 
         }
     }
     
@@ -38,6 +52,10 @@
 
         &:not(:last-child) {
             margin-right: 1.5rem;
+        }
+
+        @include respond(phone) { 
+            margin-bottom: 1rem;
         }
     }
     
@@ -67,6 +85,10 @@
         @include respond(tab-port) { 
             width: 100%;
             float: none;
+        }
+
+        @include respond(phone) { 
+            padding-top: 1rem;
         }
     }
 }

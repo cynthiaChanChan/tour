@@ -6,6 +6,10 @@
 	@include respond(tab-port) { 
 		padding: 20rem 0;
 	}
+
+	@include respond(phone) { 
+		padding: 15rem 0;
+	}
 }
 
 .section-features {
@@ -27,6 +31,10 @@
 	@include respond(tab-port) { 
 		padding: 10rem 0;
 	}
+
+	@include respond(phone) { 
+		padding: 7rem 0;
+	}
 }
 
 .section-tours {
@@ -37,6 +45,10 @@
 	@include respond(tab-port) { 
 		padding: 20rem 0 10rem 0;
 	}
+
+	@include respond(phone) { 
+		padding: 15rem 0 5rem 0;
+	}
 }
 
 .section-stories {
@@ -46,6 +58,10 @@
 	@include respond(tab-port) { 
 		padding: 10rem 0;
 	}
+
+	@include respond(phone) { 
+		padding: 5rem 0;
+	}
 }
 
 .section-book {
@@ -54,6 +70,10 @@
 
 	@include respond(tab-port) { 
 		padding: 10rem 0;
+	}
+
+	@include respond(phone) { 
+		padding: 5rem 0;
 	}
 }
 
@@ -90,6 +110,7 @@
 
 		@include respond(tab-port) { 
 			width: 100%;
+			padding: 2rem;
 		}
 	}
 }

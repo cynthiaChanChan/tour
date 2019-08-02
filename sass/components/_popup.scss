@@ -62,10 +62,10 @@
         hyphens: auto; //manual
     }
     
-    &:target {
-        opacity: 1;
-        visibility: visible;
-    }
+    // &:target {
+    //     opacity: 1;
+    //     visibility: visible;
+    // }
 
     &__close {
         &:link,

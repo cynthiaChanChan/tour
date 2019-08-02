@@ -17,6 +17,10 @@
 			box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
 		}
 
+		@include respond(phone) { 
+			outline-offset: 0;
+		}
+
 		&--p1 {
 			left: 0;
 			top: -2rem;
@@ -54,10 +58,19 @@
 			box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
 			z-index: 20;
 			outline: 2rem solid $color-primary;
+
+			@include respond(phone) { 
+				outline: none;
+				transform: none;
+			}
 		}
 	}
 
 	&:hover &__photo:not(:hover) {
 		transform: scale(0.95);
+		
+		@include respond(phone) { 
+			transform: none;
+		}
 	}
 }
