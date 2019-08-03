@@ -13,6 +13,12 @@
     visibility: hidden;
     transition: all, .3s;
 
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba($color-black, .3);
+    }
+
     &__content {
         width: 75%;
         border-radius: 3px;
@@ -62,10 +68,10 @@
         hyphens: auto; //manual
     }
     
-    // &:target {
-    //     opacity: 1;
-    //     visibility: visible;
-    // }
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
 
     &__close {
         &:link,
@@ -87,5 +93,65 @@
     &:target &__content {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
+    }
+
+    @include respond(tab-port) { 
+        &__left {
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            @include clearfix;
+            
+        }
+
+        &__img {
+            float: left;
+            width: 50%;
+        }
+
+        &__close {
+            &:link,
+            &:visited {
+                color: #fff;
+                font-size: 5rem;
+                top: 1.5rem;
+                right: 1.5rem;
+            }
+        }
+        
+        &__text {
+            font-size: 1.8rem;
+        }
+    }
+
+    @include respond (phone) {
+
+        &__content {
+            width: 90%;
+        }
+
+        &__right {
+            padding: 2rem;
+        }
+
+        &__img {
+            display: none;
+
+        }
+
+        &__close {
+            &:link,
+            &:visited {
+                color: $color-grey-dark;
+                top: .5rem;
+                right: .5rem;
+            }
+        }
+        
+        &__text {
+            columns: unset;
+            height: 30vh;
+            overflow: auto;
+        }
     }
 }
